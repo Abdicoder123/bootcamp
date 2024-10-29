@@ -2,9 +2,9 @@
 i = 1
 while i < 21
     if i % 2 == 0
-        puts "This is an even number"
+        puts "#{i} is an even number"
     else
-        puts "This is an odd number"
+        puts "#{i} is an odd number"
     end
     i += 1
 end
@@ -13,8 +13,8 @@ end
 
 for x in 1..20
     if x % 2 == 0
-        puts "This is an even number"
+        puts "#{x} is an even number"
     else
-        puts "This is an odd number"
+        puts "#{x} is an odd number"
     end 
 end
