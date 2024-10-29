@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movies</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <h3>Enter a movie:</h3>
+        <input type = "text" id = "movie">
+        <button id = "search">Search</button>
+        <h5 id = "release-date"></h5>
+        <script>
+            var URL = "https://static.codehs.com/api/12345/movies/all";
+            
+            $("#search").click(function(){
+                var movie = $("#movie").val();
+                findReleaseDate(movie);
+                
+            });
+            
+            function findReleaseDate(movie) {
+                $.getJSON(URL, function(data) {
+                    // It's returns a boolean and its finding data and making it case insensitive
+                    var foundMovie = data.find(function(item) {
+                        return item.name.toLowerCase() === movie.toLowerCase(); 
+                    });
+
+                    if (foundMovie) {
+                        // Display the release year if the movie is found
+                        $("#release-date").text("Release Year: " + foundMovie.year);
+                    } 
+                });
+            }
+            
+        </script>
+    </body>
+</html>
