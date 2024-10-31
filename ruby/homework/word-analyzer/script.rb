@@ -23,3 +23,9 @@ for i in words
         puts "- After Replacement: #{replacement}"
     end
 end
+
+anagram = ["listen", "silent", "heart", "earth", "ruby", "Python"]
+
+for i in anagram
+    
+end
