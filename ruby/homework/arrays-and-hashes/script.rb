@@ -17,6 +17,9 @@ end
 
 print fruits.length
 
+#Stretch
+
+
 #task 2
 student = {"name" => "John Smith", "age" => 25, "major" => "Computer Science", "gender" => "Male"}
 print student
