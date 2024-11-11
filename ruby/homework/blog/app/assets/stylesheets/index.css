@@ -1,0 +1,22 @@
+h1 {
+    display: flex;
+    align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between items */
+  }
+  
+  li {
+    background-color: #7b8b9c;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  
+  li:hover {
+    background-color: #b0cae3;
+  }

@@ -1,0 +1,26 @@
+<%= form_with model: category do |form| %>
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+      <% category.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.label :description %><br>
+      <%= form.text_area :description %>
+      <% category.errors.full_messages_for(:description).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+    <%= form.label :priority_level, "Priority Level" %><br>
+    <%= form.select :priority_level, options_for_select((0..4).map { |i| [i, i] }, category.priority_level) %>
+    <% category.errors.full_messages_for(:priority_level).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    </div>
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
