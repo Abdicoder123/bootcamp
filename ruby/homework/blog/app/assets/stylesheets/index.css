@@ -20,3 +20,10 @@ ul {
   li:hover {
     background-color: #b0cae3;
   }
+
+#description {
+    background-color: #29a8c2;
+}
+#description:hover {
+    background-color: #2969c2;
+}
