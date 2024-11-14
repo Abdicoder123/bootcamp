@@ -62,3 +62,6 @@ Validation: Ensure that articles must belong to a category. Validate that each a
 ### README:
  Update your README.md file to describe your project, include any rake tasks that need to be run, and general info about your app. Read this article for basic writing and formatting syntax.
 
+### Code Challenge:
+Did some fair bit of the code challenge up to some of the CRUD stuff but not all of the steps mainly worked with some of the create functionality and the index and fixing up the controller for authors among other things. Set up the databse for authors and edited articles to include that database.
+

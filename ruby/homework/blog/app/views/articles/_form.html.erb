@@ -20,6 +20,11 @@
     <%= form.label :category_id, "Category" %><br>
     <%= form.select :category_id, Category.all.collect { |category| [category.name, category.id] }, { prompt: "Select a category" } %>
     </div>
+    
+    <div>
+    <%= form.label :author_id, "Category" %><br>
+    <%= form.select :authory_id, Author.all.collect { |author| [author.name, category.id] }, { prompt: "Select an author" } %>
+    </div>
 
     <div>
       <%= form.submit %>
