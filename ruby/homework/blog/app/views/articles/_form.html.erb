@@ -23,7 +23,7 @@
     
     <div>
     <%= form.label :author_id, "Category" %><br>
-    <%= form.select :authory_id, Author.all.collect { |author| [author.name, category.id] }, { prompt: "Select an author" } %>
+    <%= form.select :author_id, Author.all.collect { |author| [author.name, author.id] }, { prompt: "Select an author" } %>
     </div>
 
     <div>
