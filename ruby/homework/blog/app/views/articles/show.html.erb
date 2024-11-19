@@ -1,5 +1,12 @@
+<% content_for :javascript do %>
+  <script type="module">
+    import "article";
+  </script>
+<% end %>
+
 <h1><%= @article.title %></h1>
 
+<div id="hide-features">
 <p><%= @article.body %></p>
 
 <ul>
@@ -15,3 +22,5 @@
 
 <h2>Add a comment:</h2>
 <%= render "comments/form", article: @article %>
+</div>
+<button type="button" id="toggle">Toggle Button</button>
