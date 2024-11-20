@@ -4,13 +4,17 @@
     </script>
   <% end %>
 <h1>Support Our Blog</h1>
-<form action="/donations" method="post"
-id="payment-form">
+<form action="/donations" method="post" id="payment-form">
+    <label for="donation-email" id="donation-email"> Email: </label>
+    <input type="email" name="email" required/>
+
     <label for="amount"> Donation Amount: </label>
     <input type="number" name="amount" min="1" required />
 
+    <div id="card-container">
     <label for="card-element"> Credit or Debit Card: </label>
     <div id="card-element"><!-- Stripe will place the card input here --> </div>
+    </div>
 
     <button type="submit"> Donate </button>
 </form>
