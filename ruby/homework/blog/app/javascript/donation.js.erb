@@ -1,4 +1,5 @@
-console.log("Donation.js loaded.")
+console.log("Donation.js loaded");
+
 document.addEventListener("DOMContentLoaded", () => {
     const stripe = Stripe("<%= Rails.application.credentials.dig(:stripe, :publishable_key) %>");
     const elements = stripe.elements();
@@ -16,7 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (error) {
         alert(error.message);
       } else {
+        const paymentMethodInput = document.createElement("input");
+        paymentMethodInput.type = "hidden";
+        paymentMethodInput.name = "payment_method_id"; 
+        paymentMethodInput.value = paymentMethod.id;  
+        form.appendChild(paymentMethodInput);
+    
         form.submit();
       }
     });
   });
+
+
+
+

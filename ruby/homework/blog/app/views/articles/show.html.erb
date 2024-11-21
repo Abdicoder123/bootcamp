@@ -1,6 +1,6 @@
 <% content_for :javascript do %>
   <script type="module">
-    import "article";
+    import "add_jquery";
   </script>
 <% end %>
 
@@ -19,8 +19,10 @@
 
 <h2>Comments</h2>
 <%= render @article.comments %>
-
+<button id="load-comments">Load More</button>
+<div id="comments">
 <h2>Add a comment:</h2>
 <%= render "comments/form", article: @article %>
+</div>
 </div>
 <button type="button" id="toggle">Toggle Button</button>
