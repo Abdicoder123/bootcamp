@@ -12,7 +12,9 @@
   <label for="card-element">Credit or Debit Card:</label>
   <div id="card-element"><!-- Stripe will place the card input here --></div>
   </div> 
-
+  
+  <label for="recurring">Do you want to make it recurring?</label>
+  <input type="checkbox" id="recurring" name="recurring" value="no">
   <button type="submit">Donate</button>
 <% end %>
 </div>
@@ -28,4 +30,5 @@
     <%= form.submit 'Confirm Email', class: 'btn btn-primary' %>
   </div>
 <br>
+
 <% end %>

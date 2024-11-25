@@ -8,7 +8,8 @@ class DonationsController < ApplicationController
       currency: 'usd',
       payment_method: params[:payment_method_id],
       confirm: true,
-      automatic_payment_methods: { enabled: true, allow_redirects: 'never' }
+      automatic_payment_methods: { enabled: true, allow_redirects: 'never' },
+      recurring: false
     })
 
     redirect_to root_path, notice: "Thank you for your donation!"
