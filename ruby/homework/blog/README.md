@@ -51,7 +51,7 @@ Validation: Ensure that articles must belong to a category. Validate that each a
  Display the number of articles within each category next to the category name in the category index page. This provides a quick overview of each category's content.
 
 ### Category Field on Article Forms:
- Ensure the article creation and editing forms contain a form field for selecting a category. Modify your Article model to handle this association. The form should allow users to select a category when creating or editing an article. (you need to use a <select> element)
+ Ensure the article creation and editing forms contain a form field for selecting a category. Modify your Article model to handle this association. The form should allow users to select a category when creating or editing an article. (you need to use a select element)
 
 ### Category Migration:
  Create a migration to add a priority_level column to the categories table. This column is an integer that represents the priority of each category (e.g. numbers like 1, 2, 3 for priority levels when using integers)
@@ -65,3 +65,14 @@ Validation: Ensure that articles must belong to a category. Validate that each a
 ### Code Challenge:
 Did some fair bit of the code challenge up to some of the CRUD stuff but not all of the steps mainly worked with some of the create functionality and the index and fixing up the controller for authors among other things. Set up the databse for authors and edited articles to include that database.
 
+## Added Authors:
+Added authors that has articles and every article belongs to an author. It has an index page and it also has a form page to create it. Also when crating an article you choose from the existing authors.
+
+## Added Devise Users
+Added the devise model to the blog app which comes preset with a lot of routes and html pages where we sign up and log in and keep track of the user that's logged in the app.
+
+## Added Donations
+Added a donation feature that's takes in a donation. The donation form is tied to an api that confirms the validity of a card and has some features. It then submits the donation based on the amount submitted for the feature. In the process of adding addditional features for a recurring donation which I excluded because it made the page bug out.
+
+## Added some Jquery files
+One of the smaller features which is toggling the button within the article show page that can hide all the comments and text in which the Vanilla JS was replaced with JQuery.
